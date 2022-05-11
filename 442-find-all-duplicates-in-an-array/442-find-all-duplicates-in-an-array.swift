@@ -7,7 +7,7 @@ class Solution {
             if dictionary[num] == nil {
                 dictionary[num] = true
             }else {
-                dictionary[num] = nil
+                // dictionary[num] = nil
                 results.append(num)
             }
         }
