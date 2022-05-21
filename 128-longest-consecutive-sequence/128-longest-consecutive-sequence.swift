@@ -7,10 +7,10 @@ class Solution {
         var log = 0
         for i in 0..<nums.count-1 {
             if nums[i] + 1 == nums[i+1] || nums[i] == nums[i+1] && counter != 1 && nums[i+1] != nums[nums.count - 1]{
-                if nums[i] == nums[i+1] {
-                    
-                }else {counter += 1}
-                
+                if nums[i] != nums[i+1] {
+                    counter += 1
+                }
+    
             }else {
                 log = max(log,counter)
                 counter = 1
