@@ -1,10 +1,14 @@
 class Solution {
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
-        for i in 0..<numbers.count{
-            for j in i+1..<numbers.count{
-                if numbers[i] + numbers[j] == target{
-                    return [i+1,j+1]
-                }
+        var left = 0 
+        var right = numbers.count - 1
+        while left < right {
+            if numbers[left] + numbers[right] == target {
+                return [left+1,right+1]
+            }else if numbers[left] + numbers[right] > target {
+                right -= 1
+            }else {
+                left += 1
             }
         }
         return [0,0]
