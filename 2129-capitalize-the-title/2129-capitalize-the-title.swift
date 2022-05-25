@@ -13,9 +13,9 @@ class Solution {
             }
             }else {
                 output.append(array[i])
-            if i != spaceCheck-1{
-                output.append(" ")
-            }
+              if i != spaceCheck-1{
+                 output.append(" ")
+             }
             }
             
         }
