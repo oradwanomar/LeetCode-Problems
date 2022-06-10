@@ -6,8 +6,7 @@ class Solution {
         var j = 1
         var optimal = 0
         while (i < nums.count - 1 && j < nums.count){
-            let min = min(arr[i],arr[j])
-            optimal += min
+            optimal += min(arr[i],arr[j])
             i += 2
             j += 2
         }
