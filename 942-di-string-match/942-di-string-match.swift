@@ -4,7 +4,7 @@ class Solution {
         var min = 0
         var max = s.count
         var arr = Array(s)
-        for i in 0..<s.count {
+        for i in 0..<arr.count {
             if arr[i] == "I" {
                 result[i] = min
                 min += 1
