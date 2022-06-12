@@ -3,7 +3,6 @@ class Solution {
         var count = 0
         var primes = Array(repeating: true, count: n)
         var i=2
-        
         while i<n {
             if primes[i] == true {
                 count += 1
