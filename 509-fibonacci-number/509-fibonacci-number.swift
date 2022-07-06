@@ -1,7 +1,16 @@
 class Solution {
-    func fib(_ n: Int) -> Int {
-        if n == 0 {return 0}
-        guard n > 2 else {return 1}
-        return fib(n-1) + fib(n-2)
+   var cache = [Int: Int]()
+    func fib(_ N: Int) -> Int {
+        guard N > 1 else {
+            return N
+        }
+        
+        if let value = cache[N] {
+            return value
+        } else {
+            let result = fib(N-1) + fib(N-2)
+            cache[N] = result
+            return result
+        }
     }
 }
