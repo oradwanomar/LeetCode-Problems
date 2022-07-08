@@ -12,7 +12,7 @@ class Solution {
                }else{
                     left = mid + 1
                }
-            mid = (left + right) / 2   
+            mid = (left + right) / 2
         }
         return nums[left]
     }
