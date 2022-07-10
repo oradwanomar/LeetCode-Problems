@@ -1,7 +1,6 @@
 final class Solution {
      func minCostClimbingStairs(_ cost: [Int]) -> Int {
         guard cost.count > 0 else {return 0}
-        guard cost.count > 2 else {return min(cost[0],cost[1])}
         var cost = cost
         let n = cost.count
          
