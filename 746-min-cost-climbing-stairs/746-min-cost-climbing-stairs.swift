@@ -1,16 +1,14 @@
 final class Solution {
      func minCostClimbingStairs(_ cost: [Int]) -> Int {
-        if cost.isEmpty {
-            return 0
-        }
+        guard cost.count > 0 else {return 0}
+        guard cost.count > 2 else {return min(cost[0],cost[1])}
         var cost = cost
-        var i = 2
-        let count = cost.count
+        let n = cost.count
          
-        for i in 2..<cost.count{
+        for i in 2..<n{
             cost[i] += min(cost[i-1],cost[i-2])
         }
          
-        return min(cost[count-2], cost[count-1])
+        return min(cost[n-2], cost[n-1])
      }
  }
