@@ -15,11 +15,7 @@ class Solution {
                 right = mid - 1
             }
         }
+        
         return left
-        // if nums[left] < target {
-        //     return left 
-        // }else {
-        //     return right 
-        // }
     }
 }
