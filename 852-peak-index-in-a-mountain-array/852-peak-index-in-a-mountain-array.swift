@@ -1,10 +1,21 @@
 class Solution {
-    func peakIndexInMountainArray(_ arr: [Int]) -> Int {
-        for index in 1 ..< arr.count-1{
-        if(arr[index-1] < arr[index] && arr[index] > arr[index+1]){
-            return index
-        }
+    func peakIndexInMountainArray(_ A: [Int]) -> Int {
+       var low = 0
+var high = A.count - 1
+
+while low < high {
+    var mid = (low+high)/2
+
+    if A[mid] < A[mid+1]
+    {
+        low = mid + 1
     }
-    return -1
+    else
+    {
+        high = mid
+    }
+}
+
+return low
     }
 }
